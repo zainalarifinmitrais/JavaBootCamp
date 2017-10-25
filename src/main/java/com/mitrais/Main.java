@@ -1,5 +1,9 @@
 package com.mitrais;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.*;
+
 public class Main {
 
     private final static int MAX_LENGTH = 30;
@@ -11,7 +15,7 @@ public class Main {
         System.out.println("Hello World!");
         FreshJuice juice = new FreshJuice();
         juice.size = FreshJuice.FreshJuiceSize.MEDIUM;
-        Employee emp = new Employee();
+
         System.out.println("Juice size = " + juice.size);
 
         Puppy tommyPuppy = new Puppy("Tommy");
@@ -45,6 +49,43 @@ public class Main {
         System.out.println("Time taken for creation"
                 + " of String objects : " + (endTime1 - startTime1)
                 + " milli seconds");
+
+        Date date = new Date();
+        String strDateFormat = "HH:mm:ss a";
+        SimpleDateFormat sdf = new SimpleDateFormat(strDateFormat);
+        System.out.println(sdf.format(date));
+
+        Date d1 = new Date();
+        Calendar cl = Calendar. getInstance();
+        cl.setTime(d1);
+
+        System.out.println("today is " + cl.WEEK_OF_YEAR+ " week of the year");
+        System.out.println("today is a "+cl.DAY_OF_MONTH + "month of the year");
+        System.out.println("today is a "+cl.WEEK_OF_MONTH +"week of the month");
+
+        //employee
+        /* Create two objects using constructor */
+        Employee empOne = new Employee("James Smith");
+        Employee empTwo = new Employee("Mary Anne");
+
+        // Invoking methods for each object created
+        empOne.empAge(26);
+        empOne.empDesignation("Senior Software Engineer");
+        empOne.empSalary(1000);
+        empOne.printEmployee();
+
+        empTwo.empAge(21);
+        empTwo.empDesignation("Software Engineer");
+        empTwo.empSalary(500);
+        empTwo.printEmployee();
+
+        int a, b;
+        a = 10;
+        b = (a == 1) ? 20: 30;
+        System.out.println( "Value of b is : " +  b );
+
+        b = (a == 10) ? 20: 30;
+        System.out.println( "Value of b is : " + b );
     }
 
     private static class FreshJuice {
