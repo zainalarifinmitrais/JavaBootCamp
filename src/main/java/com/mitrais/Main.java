@@ -63,21 +63,7 @@ public class Main {
         System.out.println("today is a "+cl.DAY_OF_MONTH + "month of the year");
         System.out.println("today is a "+cl.WEEK_OF_MONTH +"week of the month");
 
-        //employee
-        /* Create two objects using constructor */
-        Employee empOne = new Employee("James Smith");
-        Employee empTwo = new Employee("Mary Anne");
 
-        // Invoking methods for each object created
-        empOne.empAge(26);
-        empOne.empDesignation("Senior Software Engineer");
-        empOne.empSalary(1000);
-        empOne.printEmployee();
-
-        empTwo.empAge(21);
-        empTwo.empDesignation("Software Engineer");
-        empTwo.empSalary(500);
-        empTwo.printEmployee();
 
         int a, b;
         a = 10;
@@ -86,6 +72,39 @@ public class Main {
 
         b = (a == 10) ? 20: 30;
         System.out.println( "Value of b is : " + b );
+
+        methodRankPoints(255.7);
+
+        int c = 30;
+        int d = 45;
+        System.out.println("Before swapping, a = " + c + " and b = " + d);
+
+        // Invoke the swap method
+        swapFunction(a, b);
+        System.out.println("\n**Now, Before and After swapping values will be same here**:");
+        System.out.println("After swapping, a = " + c + " and b is " + d);
+
+        int e = 11;
+        int f = 6;
+        double g = 7.3;
+        double h = 9.4;
+        int result1 = minFunction(e, f);
+
+        // same function name with different parameters
+        double result2 = minFunction(g, h);
+        System.out.println("Minimum Value = " + result1);
+        System.out.println("Minimum Value = " + result2);
+
+
+        Student student1 = new Student();
+        Student student2 = new Student(30);
+
+        System.out.print("Student 1 age: " + student1.age);
+        System.out.print("\nStudent 2 age: " + student2.age);
+
+        printMax(34, 3, 3, 2, 56.5);
+        printMax(new double[]{1, 2, 3});
+
     }
 
     private static class FreshJuice {
@@ -134,5 +153,61 @@ public class Main {
             System.out.print(array[i]);
         }
         System.out.println();
+    }
+
+    public static void methodRankPoints(double points) {
+        if (points >= 202.5) {
+            System.out.println("Rank:A1");
+        }else if (points >= 122.4) {
+            System.out.println("Rank:A2");
+        }else {
+            System.out.println("Rank:A3");
+        }
+    }
+
+    public static void swapFunction(int a, int b) {
+        System.out.println("Before swapping(Inside), a = " + a + " b = " + b);
+
+        // Swap n1 with n2
+        int c = a;
+        a = b;
+        b = c;
+        System.out.println("After swapping(Inside), a = " + a + " b = " + b);
+    }
+
+    // for integer
+    public static int minFunction(int n1, int n2) {
+        int min;
+        if (n1 > n2)
+            min = n2;
+        else
+            min = n1;
+
+        return min;
+    }
+
+    // for double
+    public static double minFunction(double n1, double n2) {
+        double min;
+        if (n1 > n2)
+            min = n2;
+        else
+            min = n1;
+
+        return min;
+    }
+
+    public static void printMax( double... numbers) {
+        if (numbers.length == 0) {
+            System.out.println("No argument passed");
+            return;
+        }
+
+        double result = numbers[0];
+
+        for (int i = 1; i <  numbers.length; i++)
+            if (numbers[i] >  result)
+                result = numbers[i];
+        System.out.println("The max value is " + result);
     }
 }
