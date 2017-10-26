@@ -25,5 +25,11 @@ public class Main2 {
         s.mailCheck();
         System.out.println("\n Call mailCheck using Employee reference--");
         e.mailCheck();
+
+        Student student1 = new Student();
+        Student student2 = new Student(30);
+
+        System.out.print("Student 1 age: " + student1.age);
+        System.out.print("\nStudent 2 age: " + student2.age);
     }
 }

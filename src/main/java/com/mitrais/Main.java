@@ -96,12 +96,6 @@ public class Main {
         System.out.println("Minimum Value = " + result2);
 
 
-        Student student1 = new Student();
-        Student student2 = new Student(30);
-
-        System.out.print("Student 1 age: " + student1.age);
-        System.out.print("\nStudent 2 age: " + student2.age);
-
         printMax(34, 3, 3, 2, 56.5);
         printMax(new double[]{1, 2, 3});
 
