@@ -63,8 +63,6 @@ public class Main {
         System.out.println("today is a "+cl.DAY_OF_MONTH + "month of the year");
         System.out.println("today is a "+cl.WEEK_OF_MONTH +"week of the month");
 
-
-
         int a, b;
         a = 10;
         b = (a == 1) ? 20: 30;
@@ -99,6 +97,14 @@ public class Main {
         printMax(34, 3, 3, 2, 56.5);
         printMax(new double[]{1, 2, 3});
 
+    }
+
+    public static long factorial(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
     }
 
     private static class FreshJuice {

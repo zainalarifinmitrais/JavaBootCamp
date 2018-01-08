@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Training.iml" filepath="$PROJECT_DIR$/Training.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mavencompilerplugin/mavencompilerplugin.iml" filepath="$PROJECT_DIR$/mavencompilerplugin/mavencompilerplugin.iml" />
     </modules>
   </component>
 </project>

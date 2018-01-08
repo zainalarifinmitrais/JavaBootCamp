@@ -10,7 +10,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Training" target="1.5" />
+      <module name="mavencompilerplugin" target="1.5" />
+      <module name="Training" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
